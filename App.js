@@ -28,7 +28,6 @@ function FrontEnd() {
 
 function TopBar() {
   fill ("#41C0f2");
-  noStroke()
   rect(0, 0, width, 30);
   fill("black")
   textSize(20)
