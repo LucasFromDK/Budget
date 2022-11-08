@@ -1,2 +1,2 @@
-# Budget
-# A Personal School Project
+# Budget Website Link:
+  https://lucasfromdk.github.io/Budget/
