@@ -1,12 +1,14 @@
-let Saldo = 10000
+let input;
+let Saldo = ""
 
 function setup() {
+  StartSaldo()
   Buttons()
   createCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
-  background("255");
+  background("200");
   FrontEnd()
   text("Konto: " + Saldo + " DKK", 5, 45)
 }
@@ -19,6 +21,24 @@ function Buttons() {
 
 function Brug1(){
   Saldo = Saldo -1
+}
+
+function StartSaldo(){
+  //Input Feldt
+  input = createInput("Indtast Indkomst Her, Tryk derefter Submit.")
+  input.position(5, 50)
+  input.size(255, 20)
+
+  //Submit Knap
+  button = createButton('Submit');
+  button.size(75, 25)
+  button.position(input.width + 5, 50);
+  button.mousePressed(setSaldo);
+}
+
+function setSaldo() {
+  //Tager og sætter input til Saldo
+  Saldo = input.value()
 }
 
 function FrontEnd() {
