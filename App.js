@@ -2,7 +2,7 @@ let input;
 let Saldo = ""
 
 function preload() {
-  img = loadImage("images/PLACEHOLDER.png")
+
 }
 
 function setup() {
