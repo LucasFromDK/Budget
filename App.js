@@ -1,24 +1,22 @@
 let input;
 let Saldo = ""
 
-
 function preload() {}
 
 function setup() {
-  Buttons()
-  StartSaldo()
+  Buttons();
+  startSaldo();
   createCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
   background("200");
   FrontEnd();
-  text("Konto: " + Saldo + " DKK", 5, 45)
 }
 
 function Buttons() {
   button = createButton('Test - 1 DKK');
-  button.position(5, 100);
+  button.position(400, 50);
   button.mousePressed(Brug1);
 }
 
@@ -26,27 +24,38 @@ function Brug1(){
   Saldo = Saldo -1
 }
 
-function StartSaldo(){
+function startSaldo(){
   //Input Feldt
-  input = createInput("Indtast Indkomst Her, Tryk derefter Submit.")
-  input.position(5, 50)
-  input.size(255, 20)
+  input = createInput("Indtast Indkomst Her, Tryk derefter Submit.");
+  input.position(5, 50);
+  input.size(255, 20);
 
   //Submit Knap
   button = createButton('Submit');
   button.size(75, 25);
   button.position(input.width + 5, 50);
-  button.mousePressed(setSaldo);
+  button.mousePressed(inputSaldo);
 }
 
-function setSaldo() {
+function inputSaldo() {
   //Tager og sætter input til Saldo
   Saldo = input.value();
 }
 
 function FrontEnd() {
+  displayText();
   TopBar();
+  dividerBar();
   fill("Black");
+}
+
+function displayText() {
+  text("Konto: " + Saldo + " DKK", 5, 45);
+  textSize(16);
+  text("Placeholder 1: ", 5, 125);
+  text("Placeholder 2: ", 5, 145);
+  text("Placeholder 3: ", 5, 165);
+  textSize(12);
 }
 
 function TopBar() {
@@ -58,4 +67,18 @@ function TopBar() {
   text("❌",windowWidth - 30, 22);
   //Default Text Size
   textSize(12);
+}
+
+function dividerBar() {
+  rect(0, 90, width, 20);
+  fill("white");
+  textAlign(CENTER);
+  textSize(20);
+  text("Budget Poster", windowWidth/2, 107);
+  textAlign(LEFT);
+  textSize(12);
+}
+
+function post1() {
+
 }
