@@ -7,7 +7,9 @@ let madSaldo = 0
 let loanSaldo = 0
 let diverseSaldo = 0
 
-function preload() {}
+function preload() {
+  img = loadImage("images/Background/Logo.png");
+}
 
 function setup() {
   moveButtons();
@@ -59,25 +61,37 @@ function startSaldo(){
 function inputSaldo() {
   //Tager og sætter input til Saldo
   Saldo = input.value();
+  OriginalSaldo = input.value()
   transportSaldo = 0
   madSaldo = 0
+  loanSaldo = 0
+  diverseSaldo = 0
 }
 
 function FrontEnd() {
+  backgroundLogo()
   displayText();
   TopBar();
   dividerBar();
   fill("Black");
 }
 
+function backgroundLogo() {
+  let scale = 0.4;
+  imageMode(CENTER);
+  image(img, 0.5*width, 0.5*height, scale*width, scale*img.height*width/img.width);
+}
+
 function displayText() {
-  text("Konto: " + Saldo + " DKK", 5, 45);
+  //Viser Konto Saldo
+  text("Konto: " + Saldo + " DKK", 5, 47);
   textSize(16);
-  text("Transport: " + transportSaldo + " DKK", 5, 125);
-  text("Mad: " + madSaldo + " DKK", 5, 145);
-  text("Placeholder: " + " DKK", 5, 165);
-  text("Afbetaling af gæld: " + loanSaldo + " DKK", 5, 185);
-  text("Diverse: " + diverseSaldo + " DKK", 5, 205);
+  //Forskellige Poster
+  text("Transport: " + transportSaldo + " DKK", 5, 127);
+  text("Mad: " + madSaldo + " DKK", 5, 147);
+  text("Placeholder: " + " DKK", 5, 167);
+  text("Afbetaling af gæld: " + loanSaldo + " DKK", 5, 187);
+  text("Diverse: " + diverseSaldo + " DKK", 5, 207);
   textSize(12);
 }
 
@@ -93,11 +107,12 @@ function TopBar() {
 }
 
 function dividerBar() {
-  rect(0, 90, width, 20);
+  fill("#41C0f2")
+  rect(0, 92, width, 20);
   fill("white");
   textAlign(CENTER);
   textSize(20);
-  text("Budget Poster", windowWidth/2, 107);
+  text("Budget Poster", windowWidth/2, 108);
   textAlign(LEFT);
   textSize(12);
 }
