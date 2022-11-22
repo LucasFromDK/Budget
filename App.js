@@ -6,6 +6,17 @@ let transportSaldo = 0
 let madSaldo = 0
 let loanSaldo = 0
 let diverseSaldo = 0
+let huslejeSaldo = 0
+let forsikringSaldo = 0
+let internetSaldo = 0
+let streamingSaldo = 0
+let sjovSaldo = 0
+let tøjSaldo = 0
+let elSaldo = 0
+let mobilSaldo = 0
+let cafeSaldo = 0
+let akasseSaldo = 0
+let andrefasteSaldo = 0
 
 function preload() {
   img = loadImage("images/Background/Logo.png");
@@ -88,10 +99,21 @@ function displayText() {
   textSize(16);
   //Forskellige Poster
   text("Transport: " + transportSaldo + " DKK", 5, 127);
-  text("Mad: " + madSaldo + " DKK", 5, 147);
-  text("Placeholder: " + " DKK", 5, 167);
-  text("Afbetaling af gæld: " + loanSaldo + " DKK", 5, 187);
-  text("Diverse: " + diverseSaldo + " DKK", 5, 207);
+  text("Husleje: " + huslejeSaldo + " DKK", 5, 147);
+  text("Forsikring: " + forsikringSaldo + " DKK",5 ,167);
+  text("Internet: " + internetSaldo + " DKK", 5, 187);
+  text("Streaming: " + streamingSaldo + " DKK", 5, 207);
+  text("Sjov: " + sjovSaldo + " DKK", 5, 227);
+  text("Tøj: " + tøjSaldo + " DKK", 5, 247);
+  text("El: " + elSaldo + " DKK", 5, 267);
+  text("Mobil Abonnement: " + mobilSaldo + " DKK", 5, 287);
+  text("Varme: " + " DKK", 5, 307)
+  text("Mad: " + madSaldo + " DKK", 5, 327);
+  text("Cafe: " + cafeSaldo + " DKK", 5, 347);
+  text("Fagforening/A-Kasse: " + akasseSaldo + " DKK", 5, 367)
+  text("Andre Fasteudgifter: " + andrefasteSaldo + " DKK", 5, 387);
+  text("Afbetaling af gæld: " + loanSaldo + " DKK", 5, 407);
+  text("Diverse: " + diverseSaldo + " DKK", 5, 427);
   textSize(12);
 }
 
