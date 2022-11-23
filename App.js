@@ -25,7 +25,7 @@ function preload() {
 function setup() {
   moveButtons();
   startSaldo();
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth, 1080);
 }
 
 function draw() {
@@ -34,26 +34,101 @@ function draw() {
 }
 
 function moveButtons() {
-
   //Flyt 100 til transportSaldo
   button = createButton('Flyt 100 DKK til Transport');
-  button.position(350, 50);
+  button.position(715, 405);
+  button.size(175, 20);
   button.mousePressed(transportPost);
 
-  //Flyt 100 til madSaldo
+  //Flyt 100 til X
+  button = createButton('Flyt 100 DKK til Husleje');
+  button.position(715, 425);
+  button.size(175, 20);
+  button.mousePressed();
+
+  //Flyt 100 til X
+  button = createButton('Flyt 100 DKK til Forsikring');
+  button.position(715, 445);
+  button.size(175, 20);
+  button.mousePressed();
+
+  //Flyt 100 til X
+  button = createButton('Flyt 100 DKK til Internet');
+  button.position(715, 465);
+  button.size(175, 20);
+  button.mousePressed()
+
+  //Flyt 100 til X
+  button = createButton('Flyt 100 DKK til Streaming');
+  button.position(715, 485);
+  button.size(175, 20);
+  button.mousePressed()
+
+  //Flyt 100 til X
+  button = createButton('Flyt 100 DKK til Sjov');
+  button.position(715, 505);
+  button.size(175, 20);
+  button.mousePressed()
+
+  //Flyt 100 til X
+  button = createButton('Flyt 100 DKK til Tøj');
+  button.position(715, 525);
+  button.size(175, 20);
+  button.mousePressed()
+
+  //Flyt 100 til X
+  button = createButton('Flyt 100 DKK til El');
+  button.position(715, 545);
+  button.size(175, 20);
+  button.mousePressed()
+
+  //Flyt 100 til X
+  button = createButton('Flyt 100 DKK til Mobil');
+  button.position(715, 565);
+  button.size(175, 20);
+  button.mousePressed()
+
+  //Flyt 100 til X
+  button = createButton('Flyt 100 DKK til Varme');
+  button.position(715, 585);
+  button.size(175, 20);
+  button.mousePressed()
+
+  //Flyt 100 til X
   button = createButton('Flyt 100 DKK til Mad');
-  button.position(520, 50);
-  button.mousePressed(madPost);
+  button.position(715, 605);
+  button.size(175, 20);
+  button.mousePressed()
 
-  //Flyt 100 til diverseSaldo
+  //Flyt 100 til X
+  button = createButton('Flyt 100 DKK til Cafe');
+  button.position(715, 625);
+  button.size(175, 20);
+  button.mousePressed()
+
+  //Flyt 100 til X
+  button = createButton('Flyt 100 DKK til A-Kasse');
+  button.position(715, 645);
+  button.size(175, 20);
+  button.mousePressed()
+
+  //Flyt 100 til X
+  button = createButton('Flyt 100 DKK til Faste');
+  button.position(715, 665);
+  button.size(175, 20);
+  button.mousePressed()
+
+  //Flyt 100 til X
+  button = createButton('Flyt 100 DKK til Gæld');
+  button.position(715, 685);
+  button.size(175, 20);
+  button.mousePressed()
+
+  //Flyt 100 til X
   button = createButton('Flyt 100 DKK til Diverse');
-  button.position(660, 50);
-  button.mousePressed(diversePost);
-
-  //Flyt 100 til diverseSaldo
-  button = createButton('Flyt 100 DKK til Afbetaling');
-  button.position(820, 50);
-  button.mousePressed(diversePost);
+  button.position(715, 705);
+  button.size(175, 20);
+  button.mousePressed()
 }
 
 function startSaldo(){
@@ -77,6 +152,17 @@ function inputSaldo() {
   madSaldo = 0
   loanSaldo = 0
   diverseSaldo = 0
+  huslejeSaldo = 0
+  forsikringSaldo = 0
+  internetSaldo = 0
+  streamingSaldo = 0
+  sjovSaldo = 0
+  tøjSaldo = 0
+  elSaldo = 0
+  mobilSaldo = 0
+  cafeSaldo = 0
+  akasseSaldo = 0
+  andrefasteSaldo = 0
 }
 
 function FrontEnd() {
@@ -90,7 +176,7 @@ function FrontEnd() {
 function backgroundLogo() {
   let scale = 0.4;
   imageMode(CENTER);
-  image(img, 0.5*width, 0.5*height, scale*width, scale*img.height*width/img.width);
+  image(img, 0.5*width, 0.36*720, scale*width, scale*img.height*width/img.width);
 }
 
 function displayText() {
@@ -98,22 +184,22 @@ function displayText() {
   text("Konto: " + Saldo + " DKK", 5, 47);
   textSize(16);
   //Forskellige Poster
-  text("Transport: " + transportSaldo + " DKK", 5, 127);
-  text("Husleje: " + huslejeSaldo + " DKK", 5, 147);
-  text("Forsikring: " + forsikringSaldo + " DKK",5 ,167);
-  text("Internet: " + internetSaldo + " DKK", 5, 187);
-  text("Streaming: " + streamingSaldo + " DKK", 5, 207);
-  text("Sjov: " + sjovSaldo + " DKK", 5, 227);
-  text("Tøj: " + tøjSaldo + " DKK", 5, 247);
-  text("El: " + elSaldo + " DKK", 5, 267);
-  text("Mobil Abonnement: " + mobilSaldo + " DKK", 5, 287);
-  text("Varme: " + " DKK", 5, 307)
-  text("Mad: " + madSaldo + " DKK", 5, 327);
-  text("Cafe: " + cafeSaldo + " DKK", 5, 347);
-  text("Fagforening/A-Kasse: " + akasseSaldo + " DKK", 5, 367)
-  text("Andre Fasteudgifter: " + andrefasteSaldo + " DKK", 5, 387);
-  text("Afbetaling af gæld: " + loanSaldo + " DKK", 5, 407);
-  text("Diverse: " + diverseSaldo + " DKK", 5, 427);
+  text("Transport: " + transportSaldo + " DKK", 390, 420);
+  text("Husleje: " + huslejeSaldo + " DKK", 390, 440);
+  text("Forsikring: " + forsikringSaldo + " DKK",390 ,460);
+  text("Internet: " + internetSaldo + " DKK", 390, 480);
+  text("Streaming: " + streamingSaldo + " DKK", 390, 500);
+  text("Sjov: " + sjovSaldo + " DKK", 390, 520);
+  text("Tøj: " + tøjSaldo + " DKK", 390, 540);
+  text("El: " + elSaldo + " DKK", 390, 560);
+  text("Mobil Abonnement: " + mobilSaldo + " DKK", 390, 580);
+  text("Varme: " + " DKK", 390, 600)
+  text("Mad: " + madSaldo + " DKK", 390, 620);
+  text("Cafe: " + cafeSaldo + " DKK", 390, 640);
+  text("Fagforening/A-Kasse: " + akasseSaldo + " DKK", 390, 660)
+  text("Andre Fasteudgifter: " + andrefasteSaldo + " DKK", 390, 680);
+  text("Afbetaling af gæld: " + loanSaldo + " DKK", 390, 700);
+  text("Diverse: " + diverseSaldo + " DKK", 390, 720);
   textSize(12);
 }
 
@@ -123,7 +209,7 @@ function TopBar() {
   fill("black");
   textSize(20);
   text("Lukato Budget | Lukato Group", 5, 22);
-  text("❌",windowWidth - 30, 22);
+  text("❌",windowWidth - 50, 22);
   //Default Text Size
   textSize(12);
 }
