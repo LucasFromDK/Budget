@@ -98,7 +98,7 @@ function moveButtons() {
   button = createButton('Flyt 100 DKK til Mad');
   button.position(715, 605);
   button.size(175, 20);
-  button.mousePressed()
+  button.mousePressed(madPost)
 
   //Flyt 100 til X
   button = createButton('Flyt 100 DKK til Cafe');
@@ -122,13 +122,13 @@ function moveButtons() {
   button = createButton('Flyt 100 DKK til Gæld');
   button.position(715, 685);
   button.size(175, 20);
-  button.mousePressed()
+  button.mousePressed(loanPost)
 
   //Flyt 100 til X
   button = createButton('Flyt 100 DKK til Diverse');
   button.position(715, 705);
   button.size(175, 20);
-  button.mousePressed()
+  button.mousePressed(diversePost)
 }
 
 function startSaldo(){
