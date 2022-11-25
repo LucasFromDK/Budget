@@ -14,6 +14,7 @@ let sjovSaldo = 0
 let tøjSaldo = 0
 let elSaldo = 0
 let mobilSaldo = 0
+let varmeSaldo = 0
 let cafeSaldo = 0
 let akasseSaldo = 0
 let andrefasteSaldo = 0
@@ -44,55 +45,55 @@ function moveButtons() {
   button = createButton('Flyt 100 DKK til Husleje');
   button.position(715, 425);
   button.size(175, 20);
-  button.mousePressed();
+  button.mousePressed(huslejePost);
 
   //Flyt 100 til X
   button = createButton('Flyt 100 DKK til Forsikring');
   button.position(715, 445);
   button.size(175, 20);
-  button.mousePressed();
+  button.mousePressed(forsikringsPost);
 
   //Flyt 100 til X
   button = createButton('Flyt 100 DKK til Internet');
   button.position(715, 465);
   button.size(175, 20);
-  button.mousePressed()
+  button.mousePressed(internetPost)
 
   //Flyt 100 til X
   button = createButton('Flyt 100 DKK til Streaming');
   button.position(715, 485);
   button.size(175, 20);
-  button.mousePressed()
+  button.mousePressed(streamingPost)
 
   //Flyt 100 til X
   button = createButton('Flyt 100 DKK til Sjov');
   button.position(715, 505);
   button.size(175, 20);
-  button.mousePressed()
+  button.mousePressed(sjovPost)
 
   //Flyt 100 til X
   button = createButton('Flyt 100 DKK til Tøj');
   button.position(715, 525);
   button.size(175, 20);
-  button.mousePressed()
+  button.mousePressed(tøjPost)
 
   //Flyt 100 til X
   button = createButton('Flyt 100 DKK til El');
   button.position(715, 545);
   button.size(175, 20);
-  button.mousePressed()
+  button.mousePressed(elPost)
 
   //Flyt 100 til X
   button = createButton('Flyt 100 DKK til Mobil');
   button.position(715, 565);
   button.size(175, 20);
-  button.mousePressed()
+  button.mousePressed(mobilPost)
 
   //Flyt 100 til X
   button = createButton('Flyt 100 DKK til Varme');
   button.position(715, 585);
   button.size(175, 20);
-  button.mousePressed()
+  button.mousePressed(varmePost)
 
   //Flyt 100 til X
   button = createButton('Flyt 100 DKK til Mad');
@@ -104,19 +105,19 @@ function moveButtons() {
   button = createButton('Flyt 100 DKK til Cafe');
   button.position(715, 625);
   button.size(175, 20);
-  button.mousePressed()
+  button.mousePressed(cafePost)
 
   //Flyt 100 til X
   button = createButton('Flyt 100 DKK til A-Kasse');
   button.position(715, 645);
   button.size(175, 20);
-  button.mousePressed()
+  button.mousePressed(akassePost)
 
   //Flyt 100 til X
   button = createButton('Flyt 100 DKK til Faste');
   button.position(715, 665);
   button.size(175, 20);
-  button.mousePressed()
+  button.mousePressed(fastPost)
 
   //Flyt 100 til X
   button = createButton('Flyt 100 DKK til Gæld');
@@ -193,7 +194,7 @@ function displayText() {
   text("Tøj: " + tøjSaldo + " DKK", 390, 540);
   text("El: " + elSaldo + " DKK", 390, 560);
   text("Mobil Abonnement: " + mobilSaldo + " DKK", 390, 580);
-  text("Varme: " + " DKK", 390, 600)
+  text("Varme: " + varmeSaldo + " DKK", 390, 600)
   text("Mad: " + madSaldo + " DKK", 390, 620);
   text("Cafe: " + cafeSaldo + " DKK", 390, 640);
   text("Fagforening/A-Kasse: " + akasseSaldo + " DKK", 390, 660)
@@ -235,6 +236,87 @@ function transportPost() {
   }
 }
 
+function huslejePost() {
+  if (Saldo > 0) {
+  Saldo = Saldo - 100
+  huslejeSaldo = huslejeSaldo + 100
+  } else {
+    window.alert("Du har ikke flere penge til rådighed.")
+  }
+}
+
+function forsikringsPost() {
+  if (Saldo > 0) {
+  Saldo = Saldo - 100
+  forsikringSaldo = forsikringSaldo + 100
+  } else {
+    window.alert("Du har ikke flere penge til rådighed.")
+  }
+}
+
+function internetPost() {
+  if (Saldo > 0) {
+  Saldo = Saldo - 100
+  internetSaldo = internetSaldo + 100
+  } else {
+    window.alert("Du har ikke flere penge til rådighed.")
+  }
+}
+
+function streamingPost() {
+  if (Saldo > 0) {
+  Saldo = Saldo - 100
+  streamingSaldo = streamingSaldo + 100
+  } else {
+    window.alert("Du har ikke flere penge til rådighed.")
+  }
+}
+
+function sjovPost() {
+  if (Saldo > 0) {
+  Saldo = Saldo - 100
+  sjovSaldo = sjovSaldo + 100
+  } else {
+    window.alert("Du har ikke flere penge til rådighed.")
+  }
+}
+
+function tøjPost() {
+  if (Saldo > 0) {
+  Saldo = Saldo - 100
+  tøjSaldo = tøjSaldo + 100
+  } else {
+    window.alert("Du har ikke flere penge til rådighed.")
+  }
+}
+
+function elPost() {
+  if (Saldo > 0) {
+  Saldo = Saldo - 100
+  elSaldo = elSaldo + 100
+  } else {
+    window.alert("Du har ikke flere penge til rådighed.")
+  }
+}
+
+function mobilPost() {
+  if (Saldo > 0) {
+  Saldo = Saldo - 100
+  mobilSaldo = mobilSaldo + 100
+  } else {
+    window.alert("Du har ikke flere penge til rådighed.")
+  }
+}
+
+function varmePost() {
+  if (Saldo > 0) {
+  Saldo = Saldo - 100
+  varmeSaldo = varmeSaldo + 100
+  } else {
+    window.alert("Du har ikke flere penge til rådighed.")
+  }
+}
+
 function madPost() {
   if (Saldo > 0) {
   Saldo = Saldo - 100
@@ -244,10 +326,28 @@ function madPost() {
   }
 }
 
-function diversePost() {
+function cafePost() {
   if (Saldo > 0) {
   Saldo = Saldo - 100
-  diverseSaldo = diverseSaldo + 100
+  cafeSaldo = cafeSaldo + 100
+  } else {
+    window.alert("Du har ikke flere penge til rådighed.")
+  }
+}
+
+function akassePost() {
+  if (Saldo > 0) {
+  Saldo = Saldo - 100
+  akasseSaldo = akasseSaldo + 100
+  } else {
+    window.alert("Du har ikke flere penge til rådighed.")
+  }
+}
+
+function fastPost() {
+  if (Saldo > 0) {
+  Saldo = Saldo - 100
+  andrefasteSaldo = andrefasteSaldo + 100
   } else {
     window.alert("Du har ikke flere penge til rådighed.")
   }
@@ -257,6 +357,15 @@ function loanPost() {
   if (Saldo > 0) {
   Saldo = Saldo - 100
   loanSaldo = loanSaldo + 100
+  } else {
+    window.alert("Du har ikke flere penge til rådighed.")
+  }
+}
+
+function diversePost() {
+  if (Saldo > 0) {
+  Saldo = Saldo - 100
+  diverseSaldo = diverseSaldo + 100
   } else {
     window.alert("Du har ikke flere penge til rådighed.")
   }
