@@ -41,91 +41,76 @@ function moveButtons() {
   button.size(175, 20);
   button.mousePressed(transportPost);
 
-  //Flyt 100 til X
   button = createButton('Flyt 100 DKK til Husleje');
   button.position(715, 425);
   button.size(175, 20);
   button.mousePressed(huslejePost);
 
-  //Flyt 100 til X
   button = createButton('Flyt 100 DKK til Forsikring');
   button.position(715, 445);
   button.size(175, 20);
   button.mousePressed(forsikringsPost);
 
-  //Flyt 100 til X
   button = createButton('Flyt 100 DKK til Internet');
   button.position(715, 465);
   button.size(175, 20);
   button.mousePressed(internetPost)
 
-  //Flyt 100 til X
   button = createButton('Flyt 100 DKK til Streaming');
   button.position(715, 485);
   button.size(175, 20);
   button.mousePressed(streamingPost)
 
-  //Flyt 100 til X
   button = createButton('Flyt 100 DKK til Sjov');
   button.position(715, 505);
   button.size(175, 20);
   button.mousePressed(sjovPost)
 
-  //Flyt 100 til X
   button = createButton('Flyt 100 DKK til Tøj');
   button.position(715, 525);
   button.size(175, 20);
   button.mousePressed(tøjPost)
 
-  //Flyt 100 til X
   button = createButton('Flyt 100 DKK til El');
   button.position(715, 545);
   button.size(175, 20);
   button.mousePressed(elPost)
 
-  //Flyt 100 til X
   button = createButton('Flyt 100 DKK til Mobil');
   button.position(715, 565);
   button.size(175, 20);
   button.mousePressed(mobilPost)
 
-  //Flyt 100 til X
   button = createButton('Flyt 100 DKK til Varme');
   button.position(715, 585);
   button.size(175, 20);
   button.mousePressed(varmePost)
 
-  //Flyt 100 til X
   button = createButton('Flyt 100 DKK til Mad');
   button.position(715, 605);
   button.size(175, 20);
   button.mousePressed(madPost)
 
-  //Flyt 100 til X
   button = createButton('Flyt 100 DKK til Cafe');
   button.position(715, 625);
   button.size(175, 20);
   button.mousePressed(cafePost)
 
-  //Flyt 100 til X
   button = createButton('Flyt 100 DKK til A-Kasse');
   button.position(715, 645);
   button.size(175, 20);
   button.mousePressed(akassePost)
 
-  //Flyt 100 til X
   button = createButton('Flyt 100 DKK til Faste');
   button.position(715, 665);
   button.size(175, 20);
   button.mousePressed(fastPost)
 
-  //Flyt 100 til X
   button = createButton('Flyt 100 DKK til Gæld');
   button.position(715, 685);
   button.size(175, 20);
   button.mousePressed(loanPost)
 
-  //Flyt 100 til X
   button = createButton('Flyt 100 DKK til Diverse');
   button.position(715, 705);
   button.size(175, 20);
