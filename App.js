@@ -1,7 +1,6 @@
 let input;
 let Saldo = ""
-let FAQ = createA("http://p5js.org/", "FAQ");
-a.position(0, 0);
+
 
 //Forskellige Poster
 let transportSaldo = 0
