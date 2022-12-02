@@ -1,5 +1,7 @@
 let input;
 let Saldo = ""
+let FAQ = createA("http://p5js.org/", "FAQ");
+a.position(0, 0);
 
 //Forskellige Poster
 let transportSaldo = 0
@@ -151,6 +153,7 @@ function inputSaldo() {
   andrefasteSaldo = 0
 }
 
+//Alt det visuelle samlet et sted
 function FrontEnd() {
   backgroundLogo()
   displayText();
