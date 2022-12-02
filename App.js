@@ -36,10 +36,10 @@ function draw() {
 }
 
 function miscButton() {
-  button = createButton("FAQ")
+  button = createButton("Hjælp")
   button.size(50, 25)
   button.position(1200, 50)
-  button.mousePressed(FAQ)
+  button.mousePressed(helpBox)
 }
 
 function moveButtons() {
@@ -174,7 +174,7 @@ function backgroundLogo() {
   image(img, 0.5*width, 0.36*720, scale*width, scale*img.height*width/img.width);
 }
 
-function FAQ() {
+function helpBox() {
   window.alert("FAQ:\n\nQ: X\nA: X")
 }
 
