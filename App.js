@@ -1,7 +1,6 @@
 let input;
 let Saldo = ""
 
-
 //Forskellige Poster
 let transportSaldo = 0
 let madSaldo = 0
@@ -26,6 +25,7 @@ function preload() {
 
 function setup() {
   moveButtons();
+  miscButton();
   startSaldo();
   createCanvas(windowWidth, 1080);
 }
@@ -33,6 +33,13 @@ function setup() {
 function draw() {
   background("200");
   FrontEnd();
+}
+
+function miscButton() {
+  button = createButton("FAQ")
+  button.size(50, 25)
+  button.position(1200, 50)
+  button.mousePressed(FAQ)
 }
 
 function moveButtons() {
@@ -165,6 +172,10 @@ function backgroundLogo() {
   let scale = 0.4;
   imageMode(CENTER);
   image(img, 0.5*width, 0.36*720, scale*width, scale*img.height*width/img.width);
+}
+
+function FAQ() {
+  window.alert("FAQ:\n\nQ: X\nA: X")
 }
 
 function displayText() {
