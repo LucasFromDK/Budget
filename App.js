@@ -49,7 +49,7 @@ function moveButtons() {
   button.size(175, 20);
   button.mousePressed(transportPost);
 
-  button = createButton('Flyt 100 DKK til Husleje');
+  button = createButton('Flyt 500 DKK til Husleje');
   button.position(715, 425);
   button.size(175, 20);
   button.mousePressed(huslejePost);
@@ -236,8 +236,8 @@ function transportPost() {
 
 function huslejePost() {
   if (Saldo > 0) {
-  Saldo = Saldo - 100
-  huslejeSaldo = huslejeSaldo + 100
+  Saldo = Saldo - 500
+  huslejeSaldo = huslejeSaldo + 500
   } else {
     window.alert("Du har ikke flere penge til rådighed.")
   }
