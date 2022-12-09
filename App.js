@@ -165,6 +165,7 @@ function FrontEnd() {
   displayText();
   TopBar();
   dividerBar();
+  contactInfo();
   fill("Black");
 }
 
@@ -222,6 +223,13 @@ function dividerBar() {
   text("Budget Poster", windowWidth/2, 108);
   textAlign(LEFT);
   textSize(12);
+}
+
+function contactInfo() {
+  fill("BLACK")
+  textAlign(CENTER)
+  text("Contact Info:\nAdress: ABC Street 42\nPhone: +45 12345678", windowWidth/2, 1000)
+  textAlign(LEFT)
 }
 
 //Budget Poster
