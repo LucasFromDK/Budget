@@ -175,7 +175,7 @@ function backgroundLogo() {
 }
 
 function helpBox() {
-  window.alert("Hjælp:\n- Du kan indtaste din indkomst øverst i venstre hjørne.\n")
+  window.alert("Hjælp:\n- Du kan indtaste din indkomst øverst i venstre hjørne.\n- Husk at fjerne teksten i input-feltet først.")
 }
 
 function displayText() {
